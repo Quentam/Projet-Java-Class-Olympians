@@ -2,28 +2,25 @@ package com.example;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class MainAccueil extends Application {
 
     @Override
-    public void start(Stage primaryStage) {
-        try {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("accueil.fxml"));
-            AnchorPane root = loader.load();
-            Scene scene = new Scene(root);
-            primaryStage.setScene(scene);
-            primaryStage.setTitle("Class Olympians");
-            primaryStage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void start(Stage primaryStage) throws Exception {
+        // Charger le fichier FXML
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/Accueil.fxml"));
+        Parent root = loader.load();
+
+        // Créer et afficher la scène
+        primaryStage.setTitle("Olympics Management System");
+        primaryStage.setScene(new Scene(root, 1200, 800));
+        primaryStage.show();
     }
 
-    public static void mainAccueil(String[] args) {
+    public static void main(String[] args) {
         launch(args);
     }
 }
