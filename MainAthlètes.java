@@ -1,4 +1,4 @@
-package com.example.demo;
+package fr.isep.algo.classolympians;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +11,7 @@ public class MainAthlètes extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         // Charger le fichier FXML
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/demo/AthlètesAccueil.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fr/isep/algo/AthlètesAccueil.fxml"));
         Parent root = loader.load();
 
         // Créer et afficher la scène
