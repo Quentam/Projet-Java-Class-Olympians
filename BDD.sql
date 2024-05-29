@@ -37,12 +37,12 @@ SHOW WARNINGS;
 
 -- Table `classolympians`.`Athlète`
 CREATE TABLE IF NOT EXISTS `classolympians`.`Athlète` (
-  `idAthlète` INT NOT NULL,
+  `idAthlète` INT NOT NULL AUTO_INCREMENT,
   `Nom` VARCHAR(45) NULL,
   `Prénom` VARCHAR(45) NULL,
   `Pays` VARCHAR(45) NULL,
   `Âge` INT NULL,
-  `Sexe` VARCHAR(45) NULL,
+  `Sexe` CHAR(1) NULL,
   PRIMARY KEY (`idAthlète`))
 ENGINE = InnoDB;
 
@@ -50,7 +50,7 @@ SHOW WARNINGS;
 
 -- Table `classolympians`.`DisciplineSportive`
 CREATE TABLE IF NOT EXISTS `classolympians`.`DisciplineSportive` (
-  `idDisciplineSportive` INT NOT NULL,
+  `idDisciplineSportive` INT NOT NULL AUTO_INCREMENT,
   `Nom_Discipline` VARCHAR(45) NULL,
   PRIMARY KEY (`idDisciplineSportive`))
 ENGINE = InnoDB;
@@ -59,7 +59,7 @@ SHOW WARNINGS;
 
 -- Table `classolympians`.`EvenementSportif`
 CREATE TABLE IF NOT EXISTS `classolympians`.`EvenementSportif` (
-  `idEvenementSportif` INT NOT NULL,
+  `idEvenementSportif` INT NOT NULL AUTO_INCREMENT,
   `Nom_Evenement` VARCHAR(45) NULL,
   `Date` DATE NULL,
   `Heure` TIME NULL,
@@ -80,7 +80,7 @@ SHOW WARNINGS;
 
 -- Table `classolympians`.`Résultats`
 CREATE TABLE IF NOT EXISTS `classolympians`.`Résultats` (
-  `idRésultats` INT NOT NULL,
+  `idRésultats` INT NOT NULL AUTO_INCREMENT,
   `EvenementSportif_idEvenementSportif` INT NOT NULL,
   `Athlète_idAthlète` INT NOT NULL,
   `Temps` DATE NULL,
@@ -127,3 +127,9 @@ SHOW WARNINGS;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+
+-- Exemple :
+INSERT INTO athlète (Nom, Prénom, Pays, Âge, Sexe)
+VALUES ('RINER', 'Teddy', 'France', 35, 'M');
