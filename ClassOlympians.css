@@ -100,6 +100,7 @@ main {
     top: 51.5%;
     left: 50.5%;
 }
+
 // code css pour la barre de Navigation et les titres des pages
 
 /* Classe pour les boutons de la barre de navigation */
@@ -114,6 +115,7 @@ main {
 }
 
 .icon-button:hover {
+    -fx-effect: dropshadow(gaussian, blue, 10, 0, 0, 0);
     -fx-background-color: #666; /* Couleur de fond au survol */
 }
 
@@ -125,7 +127,7 @@ main {
 .main-title {
     -fx-font-size: 32px; /* Taille de la police */
     -fx-font-weight: bold; /* Texte en gras */
-    -fx-text-fill: #333; /* Couleur du texte */ 
+    -fx-text-fill: #333; /* Couleur du texte */
     -fx-alignment: center; /* Alignement du texte */
 }
 
@@ -136,3 +138,17 @@ main {
     -fx-text-fill: #333; /* Couleur du texte */
     -fx-alignment: center; /* Alignement du texte */
 }
+
+/* Background image should cover the entire window */
+.image-view {
+    -fx-fit-height: 100%;
+    -fx-fit-width: 100%;
+    -fx-preserve-ratio: false;
+}
+
+/* Toolbar should occupy the full height of the window */
+.toolbar {
+    -fx-pref-height: 100%;
+    -fx-background-color: grey;
+}
+
