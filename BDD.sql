@@ -8,23 +8,35 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema classolympians
 -- -----------------------------------------------------
 
--- -----------------------------------------------------
--- Schema mydb
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+-- Create the schema if it doesn't exist
+CREATE SCHEMA IF NOT EXISTS `classolympians` DEFAULT CHARACTER SET utf8 ;
 SHOW WARNINGS;
-USE `mydb` ;
+USE `classolympians` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`Athlète`
+-- Drop tables if they exist in the correct order
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`Athlète` ;
+
+-- Drop child tables first
+DROP TABLE IF EXISTS `classolympians`.`Athlète_has_DisciplineSportive`;
+DROP TABLE IF EXISTS `classolympians`.`Résultats`;
+DROP TABLE IF EXISTS `classolympians`.`EvenementSportif`;
+
+-- Drop parent tables next
+DROP TABLE IF EXISTS `classolympians`.`Athlète`;
+DROP TABLE IF EXISTS `classolympians`.`DisciplineSportive`;
 
 SHOW WARNINGS;
-CREATE TABLE IF NOT EXISTS `mydb`.`Athlète` (
+
+-- -----------------------------------------------------
+-- Create tables
+-- -----------------------------------------------------
+
+-- Table `classolympians`.`Athlète`
+CREATE TABLE IF NOT EXISTS `classolympians`.`Athlète` (
   `idAthlète` INT NOT NULL,
   `Nom` VARCHAR(45) NULL,
   `Prénom` VARCHAR(45) NULL,
@@ -36,13 +48,8 @@ ENGINE = InnoDB;
 
 SHOW WARNINGS;
 
--- -----------------------------------------------------
--- Table `mydb`.`DisciplineSportive`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`DisciplineSportive` ;
-
-SHOW WARNINGS;
-CREATE TABLE IF NOT EXISTS `mydb`.`DisciplineSportive` (
+-- Table `classolympians`.`DisciplineSportive`
+CREATE TABLE IF NOT EXISTS `classolympians`.`DisciplineSportive` (
   `idDisciplineSportive` INT NOT NULL,
   `Nom_Discipline` VARCHAR(45) NULL,
   PRIMARY KEY (`idDisciplineSportive`))
@@ -50,80 +57,67 @@ ENGINE = InnoDB;
 
 SHOW WARNINGS;
 
--- -----------------------------------------------------
--- Table `mydb`.`ÉvénementSportif`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`ÉvénementSportif` ;
-
-SHOW WARNINGS;
-CREATE TABLE IF NOT EXISTS `mydb`.`ÉvénementSportif` (
-  `idÉvénementSportif` INT NOT NULL,
-  `Nom_Evènement` VARCHAR(45) NULL,
+-- Table `classolympians`.`EvenementSportif`
+CREATE TABLE IF NOT EXISTS `classolympians`.`EvenementSportif` (
+  `idEvenementSportif` INT NOT NULL,
+  `Nom_Evenement` VARCHAR(45) NULL,
   `Date` DATE NULL,
-  `Heure` DATE NULL,
+  `Heure` TIME NULL,
   `Lieu` VARCHAR(45) NULL,
   `DisciplineSportive_idDisciplineSportive` INT NOT NULL,
-  PRIMARY KEY (`idÉvénementSportif`),
-  INDEX `fk_ÉvénementSportif_DisciplineSportive1_idx` (`DisciplineSportive_idDisciplineSportive` ASC) VISIBLE,
-  CONSTRAINT `fk_ÉvénementSportif_DisciplineSportive1`
-    FOREIGN KEY (`DisciplineSportive_idDisciplineSportive`)
-    REFERENCES `mydb`.`DisciplineSportive` (`idDisciplineSportive`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  PRIMARY KEY (`idEvenementSportif`),
+  INDEX `fk_EvenementSportif_DisciplineSportive1_idx` (`DisciplineSportive_idDisciplineSportive`)
+) ENGINE=InnoDB;
+
+ALTER TABLE `classolympians`.`EvenementSportif`
+  ADD CONSTRAINT `fk_EvenementSportif_DisciplineSportive1`
+  FOREIGN KEY (`DisciplineSportive_idDisciplineSportive`)
+  REFERENCES `classolympians`.`DisciplineSportive` (`idDisciplineSportive`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
 
 SHOW WARNINGS;
 
--- -----------------------------------------------------
--- Table `mydb`.`Résultats`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`Résultats` ;
-
-SHOW WARNINGS;
-CREATE TABLE IF NOT EXISTS `mydb`.`Résultats` (
+-- Table `classolympians`.`Résultats`
+CREATE TABLE IF NOT EXISTS `classolympians`.`Résultats` (
   `idRésultats` INT NOT NULL,
-  `ÉvénementSportif_idÉvénementSportif` INT NOT NULL,
+  `EvenementSportif_idEvenementSportif` INT NOT NULL,
   `Athlète_idAthlète` INT NOT NULL,
   `Temps` DATE NULL,
   `Score` INT NULL,
   `Médaille` VARCHAR(45) NULL,
   PRIMARY KEY (`idRésultats`),
-  INDEX `fk_Résultats_ÉvénementSportif1_idx` (`ÉvénementSportif_idÉvénementSportif` ASC) VISIBLE,
-  INDEX `fk_Résultats_Athlète1_idx` (`Athlète_idAthlète` ASC) VISIBLE,
-  CONSTRAINT `fk_Résultats_ÉvénementSportif1`
-    FOREIGN KEY (`ÉvénementSportif_idÉvénementSportif`)
-    REFERENCES `mydb`.`ÉvénementSportif` (`idÉvénementSportif`)
+  INDEX `fk_Résultats_EvenementSportif1_idx` (`EvenementSportif_idEvenementSportif`),
+  INDEX `fk_Résultats_Athlète1_idx` (`Athlète_idAthlète`),
+  CONSTRAINT `fk_Résultats_EvenementSportif1`
+    FOREIGN KEY (`EvenementSportif_idEvenementSportif`)
+    REFERENCES `classolympians`.`EvenementSportif` (`idEvenementSportif`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Résultats_Athlète1`
     FOREIGN KEY (`Athlète_idAthlète`)
-    REFERENCES `mydb`.`Athlète` (`idAthlète`)
+    REFERENCES `classolympians`.`Athlète` (`idAthlète`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 SHOW WARNINGS;
 
--- -----------------------------------------------------
--- Table `mydb`.`Athlète_has_DisciplineSportive`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`Athlète_has_DisciplineSportive` ;
-
-SHOW WARNINGS;
-CREATE TABLE IF NOT EXISTS `mydb`.`Athlète_has_DisciplineSportive` (
+-- Table `classolympians`.`Athlète_has_DisciplineSportive`
+CREATE TABLE IF NOT EXISTS `classolympians`.`Athlète_has_DisciplineSportive` (
   `Athlète_idAthlète` INT NOT NULL,
   `DisciplineSportive_idDisciplineSportive` INT NOT NULL,
   PRIMARY KEY (`Athlète_idAthlète`, `DisciplineSportive_idDisciplineSportive`),
-  INDEX `fk_Athlète_has_DisciplineSportive_DisciplineSportive1_idx` (`DisciplineSportive_idDisciplineSportive` ASC) VISIBLE,
-  INDEX `fk_Athlète_has_DisciplineSportive_Athlète1_idx` (`Athlète_idAthlète` ASC) VISIBLE,
+  INDEX `fk_Athlète_has_DisciplineSportive_DisciplineSportive1_idx` (`DisciplineSportive_idDisciplineSportive`),
+  INDEX `fk_Athlète_has_DisciplineSportive_Athlète1_idx` (`Athlète_idAthlète`),
   CONSTRAINT `fk_Athlète_has_DisciplineSportive_Athlète1`
     FOREIGN KEY (`Athlète_idAthlète`)
-    REFERENCES `mydb`.`Athlète` (`idAthlète`)
+    REFERENCES `classolympians`.`Athlète` (`idAthlète`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Athlète_has_DisciplineSportive_DisciplineSportive1`
     FOREIGN KEY (`DisciplineSportive_idDisciplineSportive`)
-    REFERENCES `mydb`.`DisciplineSportive` (`idDisciplineSportive`)
+    REFERENCES `classolympians`.`DisciplineSportive` (`idDisciplineSportive`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
