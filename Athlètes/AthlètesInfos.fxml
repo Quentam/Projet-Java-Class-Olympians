@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane layoutX="25.0" prefHeight="720.0" prefWidth="1255.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.isep.algo.classolympians.AthlètesInfosController">
+
+    <stylesheets>
+        <URL value="@ClassOlympians.css" />
+    </stylesheets>
+
+    <!-- Background Image -->
+    <ImageView fx:id="backgroundImage" fitHeight="725.0" fitWidth="1250.0" layoutX="5.0" opacity="0.6" pickOnBounds="true" preserveRatio="false">
+        <image>
+            <Image url="@Images/Athlètes.png" />
+        </image>
+    </ImageView>
+    <ToolBar layoutX="-25.0" prefHeight="725.0" prefWidth="93.0" style="-fx-background-color: grey;" />
+
+    <!-- Sidebar with Icons -->
+    <VBox layoutX="-14.0" layoutY="38.0" spacing="20">
+        <children>
+            <Button fx:id="HomeButton" style="-fx-background-color: white;" styleClass="icon-button" textAlignment="CENTER" textFill="#b54444">
+                <graphic>
+                    <ImageView fitHeight="44.0" fitWidth="53.0">
+                        <image>
+                            <Image url="@Images/LogoAccueil.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="athletesButton" style="-fx-background-color: blue;" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitHeight="53.0" fitWidth="50.0">
+                        <image>
+                            <Image url="@Images/LogoAthlètes.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="DisciplinesButton" style="-fx-background-color: darkblue;" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitHeight="51.0" fitWidth="50.0">
+                        <image>
+                            <Image url="@Images/LogoDisciplines.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="EventsButton" style="-fx-background-color: red;" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitHeight="44.0" fitWidth="40.0">
+                        <image>
+                            <Image url="@Images/LogoEvènements.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="ResultsButton" style="-fx-background-color: orange;" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitHeight="51.0" fitWidth="50.0">
+                        <image>
+                            <Image url="@Images/LogoRésultats.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="ReportsButton" style="-fx-background-color: green;" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitHeight="44.0" fitWidth="40.0">
+                        <image>
+                            <Image url="@Images/LogoRapports.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </children>
+    </VBox>
+
+    <!-- Logo in the top right corner -->
+    <ImageView fx:id="logoImage" fitHeight="100.0" fitWidth="100.0" layoutX="1154.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@Images/LogoJO.png" />
+        </image>
+    </ImageView>
+
+    <!-- Main Content -->
+    <VBox alignment="CENTER" layoutX="452.0" layoutY="243.0" spacing="20">
+        <children>
+
+            <!-- Athlete Info Section -->
+            <VBox prefHeight="292.0" prefWidth="384.0" spacing="20" style="-fx-background-color: rgba(255, 255, 255, 0.7); -fx-padding: 20;">
+                <children>
+                    <HBox spacing="10">
+                        <Label text="NOM : " />
+                        <Label fx:id="nomLabel" />
+                        <Button onAction="#handleModifyNom" text="Modifier" />
+                    </HBox>
+                    <HBox spacing="10">
+                        <Label text="Prénom : " />
+                        <Label fx:id="prenomLabel" />
+                        <Button onAction="#handleModifyPrenom" text="Modifier" />
+                    </HBox>
+                    <HBox spacing="10">
+                        <Label text="Pays : " />
+                        <Label fx:id="paysLabel" />
+                        <Button onAction="#handleModifyPays" text="Modifier" />
+                    </HBox>
+                    <HBox spacing="10">
+                        <Label text="Âge : " />
+                        <Label fx:id="ageLabel" />
+                        <Button onAction="#handleModifyAge" text="Modifier" />
+                    </HBox>
+                    <HBox spacing="10">
+                        <Label text="Discipline sportive : " />
+                        <Label fx:id="disciplineLabel" />
+                        <Button onAction="#handleModifyDiscipline" text="Modifier" />
+                    </HBox>
+                    <HBox spacing="10">
+                        <Label text="Evènements sportifs : " />
+                        <Label fx:id="eventsLabel" />
+                        <Button onAction="#handleModifyEvents" text="Modifier" />
+                    </HBox>
+                </children>
+            </VBox>
+        </children>
+    </VBox>
+      <Label layoutX="582.0" layoutY="53.0" styleClass="main-title" text="Athlètes" />
+      <Label layoutX="541.0" layoutY="100.0" styleClass="subtitle" text="Informations de l'athlète" />
+</AnchorPane>
