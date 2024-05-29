@@ -1,4 +1,4 @@
-package fr.isep.algo.classolympians2024;
+package fr.isep.algo.classolympians;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ import java.sql.Statement;
 
 public class BDDconnexion {
     public static void main(String[] args) {
-        String jdbcUrl = "jdbc:mysql://localhost:3307/classolympians";  //Mettre 3306 par défault
+        String jdbcUrl = "jdbc:mysql://localhost:3307/classolympians";  //Mettre 3306 par défault, et appeller la bdd "classolympians" sur xampp
         String username = "root";
         String password = "root";
 
