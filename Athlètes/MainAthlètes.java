@@ -5,18 +5,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class MainAthlètes extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        // Charger le fichier FXML
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fr/isep/algo/AthlètesAccueil.fxml"));
-        Parent root = loader.load();
-
-        // Créer et afficher la scène
-        primaryStage.setTitle("Olympics Management System");
-        primaryStage.setScene(new Scene(root, 1200, 800));
+        Parent root = FXMLLoader.load(getClass().getResource("/fr/isep/algo/classolympians/AthlètesAccueil.fxml"));
+        Scene scene = new Scene(root, 1200, 800);
+        primaryStage.setScene(scene);
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.setMaximized(true);
         primaryStage.show();
     }
 
