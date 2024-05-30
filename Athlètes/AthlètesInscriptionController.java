@@ -98,12 +98,12 @@ public class AthlètesInscriptionController {
 
     @FXML
     private void handleDisciplinesButton() throws IOException {
-        openPage("/fr/isep/algo/classolympians/AccueilDisciplines.fxml");
+        openPage("/fr/isep/algo/classolympians/DisciplinesAccueil.fxml");
     }
 
     @FXML
     private void handleEventsButton() throws IOException {
-        openPage("/fr/isep/algo/classolympians/AccueilEvènements.fxml");
+        openPage("/fr/isep/algo/classolympians/EvènementsAccueil.fxml");
     }
 
     @FXML
@@ -113,7 +113,7 @@ public class AthlètesInscriptionController {
 
     @FXML
     private void handleReportsButton() throws IOException {
-        openPage("/fr/isep/algo/classolympians/AccueilGénérationdeRapports.fxml");
+        openPage("/fr/isep/algo/classolympians/RapportsAccueil.fxml");
     }
 
     private void openPage(String fxmlPath) throws IOException {
