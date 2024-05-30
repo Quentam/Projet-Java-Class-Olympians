@@ -1,4 +1,4 @@
-package com.example;
+package fr.isep.algo.accueilprojet;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
