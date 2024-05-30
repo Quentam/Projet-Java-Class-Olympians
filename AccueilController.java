@@ -34,7 +34,7 @@ public class AccueilController {
     // Add methods to handle navigation button actions
     @FXML
     private void athletesButton() {
-        navigateToPage("/fr/isep/algo/classolympians/AthlètesAccueil.fxml");
+        navigateToPage("/fr/isep/algo/classolympians/Athlètes/AthlètesAccueil.fxml");
     }
 
     @FXML
@@ -44,7 +44,7 @@ public class AccueilController {
 
     @FXML
     private void eventsButton() {
-        navigateToPage("/fr/isep/algo/classolympians/AthlètesAccueil.fxml");
+        navigateToPage("/fr/isep/algo/classolympians/Evènements/EvènementsAccueil.fxml");
     }
 
     @FXML
