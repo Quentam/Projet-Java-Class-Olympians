@@ -87,21 +87,20 @@
     </ImageView>
 
     <!-- Main Content -->
-    <VBox alignment="CENTER" layoutX="402.0" layoutY="193.0" spacing="20">
+    <VBox alignment="CENTER" layoutX="326.0" layoutY="50.0" spacing="20">
         <children>
-            <HBox alignment="CENTER" spacing="20">
-                <Button onAction="#handleAddEvent" styleClass="button-add-event" text="Appuyer pour ajouter un nouvel évènement" />
-                <Button onAction="#handleRegisterAthlete" styleClass="button-register-athlete" text="Appuyer pour inscrire un athlète à un évènement" />
-            </HBox>
-            <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: transparent;">
-                <VBox fx:id="eventList" spacing="10">
-                    <!-- Event items will be added here dynamically -->
-                </VBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" styleClass="main-title" text="Evènements" textAlignment="CENTER" />
+            <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-weight: Bold;" styleClass="subtitle" text="Rechercher des sportifs et consulter les informations des différents inscrits" textAlignment="CENTER" />
+
+            <Button onAction="#handleAddEvent" prefHeight="25.0" prefWidth="277.0" text="Appuyer pour ajouter un nouvel évènement" />
+            <Button onAction="#handleRegisterAthlete" text="Appuyer pour inscrire un athlète à un évènement" />
+
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="400.0">
+                <content>
+                    <VBox fx:id="eventList" spacing="10" />
+                </content>
             </ScrollPane>
         </children>
     </VBox>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="593.0" layoutY="40.0" styleClass="main-title" text="Evènements" textAlignment="CENTER" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="327.0" layoutY="100.0" style="-fx-font-weight: Bold;" styleClass="subtitle" text="Enregistrer des évènements et consulter les différents évènements déjà enregistrés" textAlignment="CENTER" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="396.0" layoutY="135.0" style="-fx-font-weight: Bold;" styleClass="subtitle" text="Les évènements ci-dessous apparaissent par ordre chronologique." textAlignment="CENTER" />
 
 </AnchorPane>
