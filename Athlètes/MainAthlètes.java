@@ -6,13 +6,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import java.awt.Toolkit;
 
 public class MainAthlètes extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/fr/isep/algo/classolympians/AthlètesAccueil.fxml"));
-        Scene scene = new Scene(root, 1200, 800);
+        Scene scene = new Scene(root,Toolkit.getDefaultToolkit().getScreenSize().getWidth(),Toolkit.getDefaultToolkit().getScreenSize().getHeight());
+        primaryStage.setTitle("Page Athlètes");
         primaryStage.setScene(scene);
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setMaximized(true);
@@ -21,5 +23,8 @@ public class MainAthlètes extends Application {
 
     public static void main(String[] args) {
         launch(args);
+        System.out.println();
     }
+
 }
+
