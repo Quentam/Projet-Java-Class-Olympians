@@ -114,6 +114,11 @@
                         <Button onAction="#handleModifyAge" text="Modifier" />
                     </HBox>
                     <HBox spacing="10">
+                        <Label text="Sexe : " />
+                        <Label fx:id="sexeLabel" />
+                        <Button onAction="#handleModifySexe" text="Modifier" />
+                    </HBox>
+                    <HBox spacing="10">
                         <Label text="Discipline sportive : " />
                         <Label fx:id="disciplineLabel" />
                         <Button onAction="#handleModifyDiscipline" text="Modifier" />
