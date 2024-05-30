@@ -4,16 +4,18 @@ public class Athlète {
     private String nom;
     private String prenom;
     private String pays;
-    private String age;
+    private int age;
+    private char sexe;
     private String discipline;
     private String events;
 
-    public Athlète(String nom, String prenom, String pays, String age, String discipline) {
+    public Athlète(String nom, String prenom, String pays, int age, char sexe, String discipline) {
         this.nom = nom;
         this.prenom = prenom;
         this.pays = pays;
         this.age = age;
-        this.discipline = discipline;
+        this.sexe = sexe;
+        this.discipline = "";
         this.events = "";
     }
 
@@ -42,12 +44,20 @@ public class Athlète {
         this.pays = pays;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
+    }
+
+    public char getSexe() {
+        return sexe;
+    }
+
+    public void setSexe(char sexe) {
+        this.sexe = sexe;
     }
 
     public String getDiscipline() {
