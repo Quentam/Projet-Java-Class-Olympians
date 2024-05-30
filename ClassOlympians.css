@@ -73,32 +73,32 @@ main {
 /* Positionnement et couleurs des cercles */
 .athletes {
     background: rgba(0, 123, 255, 0.7);
-    top: 18%;
-    left: 2%;
+    top: 40%;
+    left: 15%;
 }
 
 .disciplines {
     background: rgba(0, 0, 0, 0.7);
-    top: 18%;
-    left: 34%;
+    top: 40%;
+    left: 35%;
 }
 
 .events {
     background: rgba(255, 0, 0, 0.7);
-    top: 19%;
-    left: 66.5%;
+    top: 40%;
+    left: 55%;
 }
 
 .results {
     background: rgba(255, 165, 0, 0.7);
-    top: 50%;
-    left: 17%;
+    top: 55%;
+    left: 25%;
 }
 
 .reports {
     background: rgba(0, 128, 0, 0.7);
-    top: 51.5%;
-    left: 50.5%;
+    top: 55%;
+    left: 45%;
 }
 
 // code css pour la barre de Navigation et les titres des pages
