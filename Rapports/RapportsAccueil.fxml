@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
@@ -13,7 +14,7 @@
     <!-- Background Image -->
     <ImageView fx:id="backgroundImage" fitHeight="725.0" fitWidth="1250.0" layoutX="5.0" opacity="0.6" pickOnBounds="true" preserveRatio="false">
         <image>
-            <Image url="@Images/rapport.png" />
+            <Image url="@Images/Rapports.png" />
         </image>
     </ImageView>
 
