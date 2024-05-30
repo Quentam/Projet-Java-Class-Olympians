@@ -69,10 +69,10 @@ public class AthlètesInfosController {
     public void initialize() {
         HomeButton.setOnAction(event -> openPage("/fr/isep/algo/classolympians/Accueil.fxml"));
         athletesButton.setOnAction(event -> openPage("/fr/isep/algo/classolympians/AthlètesAccueil.fxml"));
-        DisciplinesButton.setOnAction(event -> openPage("/fr/isep/algo/classolympians/AccueilDisciplines.fxml"));
-        EventsButton.setOnAction(event -> openPage("/fr/isep/algo/classolympians/AccueilEvènements.fxml"));
+        DisciplinesButton.setOnAction(event -> openPage("/fr/isep/algo/classolympians/DisciplinesAccueil.fxml"));
+        EventsButton.setOnAction(event -> openPage("/fr/isep/algo/classolympians/EvènementsAccueil.fxml"));
         ResultsButton.setOnAction(event -> openPage("/fr/isep/algo/classolympians/AccueilRésultats.fxml"));
-        ReportsButton.setOnAction(event -> openPage("/fr/isep/algo/classolympians/AccueilGénérationdeRapports.fxml"));
+        ReportsButton.setOnAction(event -> openPage("/fr/isep/algo/classolympians/RapportsAccueil.fxml"));
     }
 
     private void openPage(String fxmlPath) {
