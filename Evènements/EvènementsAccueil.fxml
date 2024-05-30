@@ -90,7 +90,7 @@
     <VBox alignment="CENTER" layoutX="326.0" layoutY="50.0" spacing="20">
         <children>
             <Label alignment="CENTER" contentDisplay="CENTER" styleClass="main-title" text="Evènements" textAlignment="CENTER" />
-            <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-weight: Bold;" styleClass="subtitle" text="Rechercher des sportifs et consulter les informations des différents inscrits" textAlignment="CENTER" />
+            <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-weight: Bold;" styleClass="subtitle" text="Enregistrer des évènements et consulter les différents évènements déjà enregistrés" textAlignment="CENTER" />
 
             <Button onAction="#handleAddEvent" prefHeight="25.0" prefWidth="277.0" text="Appuyer pour ajouter un nouvel évènement" />
             <Button onAction="#handleRegisterAthlete" text="Appuyer pour inscrire un athlète à un évènement" />
