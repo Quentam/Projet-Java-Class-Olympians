@@ -109,14 +109,18 @@
                     <HBox spacing="10">
                         <TextField fx:id="ageField" prefHeight="25.0" prefWidth="330.0" promptText="Saisissez votre âge" />
                     </HBox>
+                    <Label styleClass="form-label" text="Sexe" />
+                    <HBox spacing="10">
+                        <TextField fx:id="sexeField" prefHeight="25.0" prefWidth="330.0" promptText="Saisissez votre sexe" />
+                    </HBox>
                     <Label styleClass="form-label" text="Discipline" />
                     <HBox spacing="10">
                         <TextField fx:id="disciplineField" prefHeight="25.0" prefWidth="330.0" promptText="Saisissez votre discipline sportive" />
                     </HBox>
                 </children>
             </VBox>
+            <Button fx:id="enregistrerButton" styleClass="register-button" text="Enregistrer l'athlète" onAction="#enregistrerAthlete"/>
 
-            <Button fx:id="enregistrerButton" styleClass="register-button" text="Enregistrer l'athlète" />
         </children>
     </VBox>
     <Label layoutX="580.0" layoutY="52.0" styleClass="main-title" text="Athlètes" />
