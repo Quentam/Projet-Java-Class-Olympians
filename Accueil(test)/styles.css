@@ -1,0 +1,100 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Empêche le défilement vertical */
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('fond.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 80px; /* Ajuster la taille du logo si nécessaire */
+}
+
+h1 {
+    margin: 5px 0;
+    font-size: 2.5vw; /* Taille relative à la fenêtre pour être responsive */
+}
+
+h2 {
+    margin: 5px 0;
+    font-size: 1.5vw; /* Taille relative à la fenêtre pour être responsive */
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.circle {
+    width: 30vw; /* Taille des cercles */
+    height: 30vw; /* Taille des cercles */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+    font-size: 1.5vw;
+    font-weight: bold;
+    opacity: 0.9;
+}
+
+/* Positionnement et couleurs des cercles */
+.athletes {
+    background: rgba(0, 123, 255, 0.7);
+    top: 18%;
+    left: 2%;
+}
+
+.disciplines {
+    background: rgba(0, 0, 0, 0.7);
+    top: 18%;
+    left: 34%;
+}
+
+.events {
+    background: rgba(255, 0, 0, 0.7);
+    top: 19%;
+    left: 66.5%;
+}
+
+.results {
+    background: rgba(255, 165, 0, 0.7);
+    top: 50%;
+    left: 17%;
+}
+
+.reports {
+    background: rgba(0, 128, 0, 0.7);
+    top: 51.5%;
+    left: 50.5%;
+}
