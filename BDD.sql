@@ -151,3 +151,15 @@ VALUES ('Karaté');
 
 INSERT INTO Athlète_has_DisciplineSportive (Athlète_idAthlète, DisciplineSportive_idDisciplineSportive)
 VALUES (1, 1);
+
+INSERT INTO EvenementSportif (Nom_Evenement, Date, Heure, Lieu, DisciplineSportive_idDisciplineSportive)
+VALUES ('Judo : -60kg - hommes, éliminatoires', '2024-04-29', '10:00', 'Arena Champ-de-Mars', 1);
+
+INSERT INTO EvenementSportif (Nom_Evenement, Date, Heure, Lieu, DisciplineSportive_idDisciplineSportive)
+VALUES ('Football : Hommes - Ouzbékistan/Espagne', '2024-04-24', '15:00:00', 'Paris - Parc des Princes', 2);
+
+INSERT INTO EvenementSportif (Nom_Evenement, Date, Heure, Lieu, DisciplineSportive_idDisciplineSportive)
+VALUES ('Natation : 50m nage libre hommes', '2024-05-01', '10:30:00', 'Paris La Défense Arena', 4);
+
+INSERT INTO EvenementSportif (Nom_Evenement, Date, Heure, Lieu, DisciplineSportive_idDisciplineSportive)
+VALUES ('Judo : -60kg - femmes, repêchages', '2024-04-20', '10:00:00', 'Arena Champ-de-Mars', 1);
