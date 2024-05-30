@@ -80,7 +80,7 @@ public class EvènementsAccueilController {
 
     @FXML
     private void handleDisciplinesButton() {
-        openPage("/fr/isep/algo/classolympians/AccueilDisciplines.fxml");
+        openPage("/fr/isep/algo/classolympians/DisciplinesAccueil.fxml");
     }
 
     @FXML
@@ -95,7 +95,7 @@ public class EvènementsAccueilController {
 
     @FXML
     private void handleReportsButton() {
-        openPage("/fr.isep.algo.classolympians/AccueilGénérationdeRapports.fxml");
+        openPage("/fr.isep.algo.classolympians/RapportsAccueil.fxml");
     }
 
     private void openPage(String fxmlPath) {
