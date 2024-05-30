@@ -133,3 +133,21 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- Exemple :
 INSERT INTO athlète (Nom, Prénom, Pays, Âge, Sexe)
 VALUES ('RINER', 'Teddy', 'France', 35, 'M');
+
+INSERT INTO DisciplineSportive (Nom_Discipline)
+VALUES ('Judo');
+INSERT INTO DisciplineSportive (Nom_Discipline)
+VALUES ('Football');
+INSERT INTO DisciplineSportive (Nom_Discipline)
+VALUES ('Basketball');
+INSERT INTO DisciplineSportive (Nom_Discipline)
+VALUES ('Natation');
+INSERT INTO DisciplineSportive (Nom_Discipline)
+VALUES ("Tir à l'arc");
+INSERT INTO DisciplineSportive (Nom_Discipline)
+VALUES ('Equitation');
+INSERT INTO DisciplineSportive (Nom_Discipline)
+VALUES ('Karaté');
+
+INSERT INTO Athlète_has_DisciplineSportive (Athlète_idAthlète, DisciplineSportive_idDisciplineSportive)
+VALUES (1, 1);
