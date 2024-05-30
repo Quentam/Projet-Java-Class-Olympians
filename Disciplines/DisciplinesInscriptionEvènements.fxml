@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane layoutX="25.0" prefHeight="720.0" prefWidth="1255.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.isep.algo.classolympians.DisciplinesInscriptionEvènementsController">
+
+    <stylesheets>
+        <URL value="@ClassOlympians.css" />
+    </stylesheets>
+
+    <!-- Background Image -->
+    <ImageView fx:id="backgroundImage" fitHeight="725.0" fitWidth="1250.0" layoutX="5.0" opacity="0.6" pickOnBounds="true" preserveRatio="false">
+        <image>
+            <Image url="@Images/Disciplines.png" />
+        </image>
+    </ImageView>
+    <ToolBar layoutX="-25.0" prefHeight="725.0" prefWidth="93.0" style="-fx-background-color: grey;" />
+
+    <!-- Sidebar with Icons -->
+    <VBox layoutX="-14.0" layoutY="38.0" spacing="20">
+        <children>
+            <Button fx:id="HomeButton" onAction="#handleHomeButton" style="-fx-background-color: white;" styleClass="icon-button" textAlignment="CENTER" textFill="#b54444">
+                <graphic>
+                    <ImageView fitHeight="44.0" fitWidth="53.0">
+                        <image>
+                            <Image url="@Images/LogoAccueil.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="athletesButton" onAction="#handleAthletesButton" style="-fx-background-color: blue;" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitHeight="53.0" fitWidth="50.0">
+                        <image>
+                            <Image url="@Images/LogoAthlètes.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="DisciplinesButton" onAction="#handleDisciplinesButton" style="-fx-background-color: darkblue;" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitHeight="51.0" fitWidth="50.0">
+                        <image>
+                            <Image url="@Images/LogoDisciplines.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="EventsButton" onAction="#handleEventsButton" style="-fx-background-color: red;" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitHeight="44.0" fitWidth="40.0">
+                        <image>
+                            <Image url="@Images/LogoEvènements.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="ResultsButton" onAction="#handleResultsButton" style="-fx-background-color: orange;" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitHeight="51.0" fitWidth="50.0">
+                        <image>
+                            <Image url="@Images/LogoRésultats.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="ReportsButton" onAction="#handleReportsButton" style="-fx-background-color: green;" styleClass="icon-button">
+                <graphic>
+                    <ImageView fitHeight="44.0" fitWidth="40.0">
+                        <image>
+                            <Image url="@Images/LogoRapports.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </children>
+    </VBox>
+
+    <!-- Logo in the top right corner -->
+    <ImageView fx:id="logoImage" fitHeight="100.0" fitWidth="100.0" layoutX="1154.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@Images/LogoJO.png" />
+        </image>
+    </ImageView>
+
+    <!-- Main Content -->
+    <VBox alignment="CENTER" layoutX="326.0" layoutY="50.0" spacing="20">
+        <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" styleClass="main-title" text="Disciplines" textAlignment="CENTER" />
+            <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-weight: Bold;" styleClass="subtitle" text="Enregistrer des disciplines et consulter les différentes disciplines déjà enregistrées" textAlignment="CENTER" />
+
+            <Button onAction="#handleAddEvent" prefHeight="25.0" prefWidth="277.0" text="Appuyer pour ajouter une nouvelle discipline" />
+            <Button onAction="#handleRegisterAthlete" text="Appuyer pour inscrire un athlète à une discipline" />
+
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="400.0">
+                <content>
+                    <VBox fx:id="eventList" spacing="10" />
+                </content>
+            </ScrollPane>
+        </children>
+    </VBox>
+
+</AnchorPane>
