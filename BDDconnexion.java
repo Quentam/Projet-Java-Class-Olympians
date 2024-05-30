@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 
-public class BDDconnexion {
+public class BDDconnexion {        //FICHIER UTILISE POUR TESTER LA CONNEXION AVEC LA BDD EN LOCALHOST SUR PHPMYADMIN
     public static void main(String[] args) {
         String jdbcUrl = "jdbc:mysql://localhost:3307/classolympians";  //Mettre 3306 par défault, et appeller la bdd "classolympians" sur xampp
         String username = "root";
