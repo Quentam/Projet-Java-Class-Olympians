@@ -1,5 +1,6 @@
 package fr.isep.algo.classolympians;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -25,6 +26,9 @@ public class AthlètesInfosController {
 
     @FXML
     private Label ageLabel;
+
+    @FXML
+    private Label sexeLabel;
 
     @FXML
     private Label disciplineLabel;
@@ -55,7 +59,8 @@ public class AthlètesInfosController {
         prenomLabel.setText(athlete.getPrenom());
         nomLabel.setText(athlete.getNom());
         paysLabel.setText(athlete.getPays());
-        ageLabel.setText(athlete.getAge());
+        ageLabel.setText(String.valueOf(athlete.getAge()));
+        sexeLabel.setText(String.valueOf(athlete.getSexe()));
         disciplineLabel.setText(athlete.getDiscipline());
         eventsLabel.setText(athlete.getEvents());
     }
@@ -102,6 +107,9 @@ public class AthlètesInfosController {
     }
 
     @FXML
+    public void handleModifySexe() {modifyField(sexeLabel, "sexe"); }
+
+    @FXML
     public void handleModifyDiscipline() {
         modifyField(disciplineLabel, "discipline");
     }
@@ -135,7 +143,10 @@ public class AthlètesInfosController {
                     currentAthlete.setPays(newValue);
                     break;
                 case "age":
-                    currentAthlete.setAge(newValue);
+                    currentAthlete.setAge(Integer.parseInt(newValue));
+                    break;
+                case "sexe":
+                    currentAthlete.setSexe((newValue).charAt(0));
                     break;
                 case "discipline":
                     currentAthlete.setDiscipline(newValue);
@@ -146,4 +157,5 @@ public class AthlètesInfosController {
             }
         });
     }
+
 }
