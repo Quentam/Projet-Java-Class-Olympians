@@ -54,7 +54,7 @@ public class AccueilController {
 
     @FXML
     private void reportsButton() {
-        navigateToPage("/fr/isep/algo/classolympians/AthlètesAccueil.fxml");
+        navigateToPage("/fr/isep/algo/classolympians/Rapports/RapportsAccueil.fxml");
     }
 
 
