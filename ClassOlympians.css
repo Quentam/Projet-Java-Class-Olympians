@@ -1,104 +1,109 @@
 // code css pour la page d'accueil 
 
+/* styles.css */
+
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden; /* Empêche le défilement vertical */
-    font-family: Arial, sans-serif;
+    -fx-margin: 0;
+    -fx-padding: 0;
+    -fx-height: 100%;
+    -fx-overflow: hidden; /* Empêche le défilement vertical */
+    -fx-font-family: Arial, sans-serif;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url('fond.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    text-shadow: 2px 2px 4px #000;
+    -fx-display: flex;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+    -fx-background-image: url('fond.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-attachment: fixed;
+    -fx-background-size: cover;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 4, 0, 2, 2);
 }
 
 .container {
-    text-align: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
+    -fx-text-alignment: center;
+    -fx-position: relative;
+    -fx-width: 100%;
+    -fx-height: 100%;
 }
 
 header {
-    position: absolute;
-    top: 10px;
-    width: 100%;
-    text-align: center;
+    -fx-position: absolute;
+    -fx-top: 10px;
+    -fx-width: 100%;
+    -fx-text-alignment: center;
 }
 
 .logo {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 80px; /* Ajuster la taille du logo si nécessaire */
+    -fx-position: absolute;
+    -fx-top: 10px;
+    -fx-right: 10px;
+    -fx-width: 80px; /* Ajuster la taille du logo si nécessaire */
 }
 
 h1 {
-    margin: 5px 0;
-    font-size: 2.5vw; /* Taille relative à la fenêtre pour être responsive */
+    -fx-margin: 5px 0;
+    -fx-font-size: 2.5vw; /* Taille relative à la fenêtre pour être responsive */
 }
 
 h2 {
-    margin: 5px 0;
-    font-size: 1.5vw; /* Taille relative à la fenêtre pour être responsive */
+    -fx-margin: 5px 0;
+    -fx-font-size: 1.5vw; /* Taille relative à la fenêtre pour être responsive */
 }
 
 main {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    -fx-position: relative;
+    -fx-width: 100%;
+    -fx-height: 100%;
 }
 
 .circle {
-    width: 30vw; /* Taille des cercles */
-    height: 30vw; /* Taille des cercles */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    color: white;
-    text-shadow: 2px 2px 4px #000;
-    font-size: 1.5vw;
-    font-weight: bold;
-    opacity: 0.9;
+    -fx-width: 30vw; /* Taille des cercles */
+    -fx-height: 30vw; /* Taille des cercles */
+    -fx-background-radius: 50%;
+    -fx-display: flex;
+    -fx-align-items: center;
+    -fx-justify-content: center;
+    -fx-position: absolute;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 4, 0, 2, 2);
+    -fx-font-size: 1.5vw;
+    -fx-font-weight: bold;
+    -fx-opacity: 0.9;
 }
 
 /* Positionnement et couleurs des cercles */
 .athletes {
-    background: rgba(0, 123, 255, 0.7);
-    top: 40%;
-    left: 15%;
+    -fx-background-color: rgba(0, 123, 255, 0.7);
+    -fx-top: 40%;
+    -fx-left: 15%;
 }
 
 .disciplines {
-    background: rgba(0, 0, 0, 0.7);
-    top: 40%;
-    left: 35%;
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+    -fx-top: 40%;
+    -fx-left: 35%;
 }
 
 .events {
-    background: rgba(255, 0, 0, 0.7);
-    top: 40%;
-    left: 55%;
+    -fx-background-color: rgba(255, 0, 0, 0.7);
+    -fx-top: 40%;
+    -fx-left: 55%;
 }
 
 .results {
-    background: rgba(255, 165, 0, 0.7);
-    top: 55%;
-    left: 25%;
+    -fx-background-color: rgba(255, 165, 0, 0.7);
+    -fx-top: 55%;
+    -fx-left: 25%;
 }
 
 .reports {
-    background: rgba(0, 128, 0, 0.7);
-    top: 55%;
-    left: 45%;
+    -fx-background-color: rgba(0, 128, 0, 0.7);
+    -fx-top: 55%;
+    -fx-left: 45%;
 }
 
 // code css pour la barre de Navigation et les titres des pages
