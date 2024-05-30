@@ -1,3 +1,4 @@
+
 package fr.isep.algo.classolympians;
 
 import javafx.fxml.FXML;
@@ -182,12 +183,12 @@ public class AthlètesAccueilController {
 
     @FXML
     private void handleDisciplinesButton() {
-        navigateToPage("/fr/isep/algo/classolympians/AccueilDisciplines.fxml");
+        navigateToPage("/fr/isep/algo/classolympians/DisciplinesAccueil.fxml");
     }
 
     @FXML
     private void handleEventsButton() {
-        navigateToPage("/fr/isep/algo/classolympians/AccueilEvènements.fxml");
+        navigateToPage("/fr/isep/algo/classolympians/EvènementsAccueil.fxml");
     }
 
     @FXML
@@ -197,7 +198,7 @@ public class AthlètesAccueilController {
 
     @FXML
     private void handleReportsButton() {
-        navigateToPage("/fr/isep/algo/classolympians/AccueilGénérationdeRapports.fxml");
+        navigateToPage("/fr/isep/algo/classolympians/RapportsAccueil.fxml");
     }
 
     private void navigateToPage(String fxmlFile) {
