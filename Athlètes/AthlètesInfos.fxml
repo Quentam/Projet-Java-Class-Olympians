@@ -132,6 +132,6 @@
             </VBox>
         </children>
     </VBox>
-      <Label layoutX="582.0" layoutY="53.0" styleClass="main-title" text="Athlètes" />
-      <Label layoutX="541.0" layoutY="100.0" styleClass="subtitle" text="Informations de l'athlète" />
+    <Label layoutX="582.0" layoutY="53.0" styleClass="main-title" text="Athlètes" />
+    <Label layoutX="541.0" layoutY="100.0" styleClass="subtitle" text="Informations de l'athlète" />
 </AnchorPane>
