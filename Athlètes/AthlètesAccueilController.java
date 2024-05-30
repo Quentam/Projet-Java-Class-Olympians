@@ -13,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -65,6 +66,52 @@ public class AthlètesAccueilController {
 
         // Populate athlete list with shared data
         updateAthleteList();
+
+        // Populate athlete list with data from the database
+        populateAthleteList();
+    }
+
+    @FXML
+    private void openInscriptionPage() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fr/isep/algo/classolympians/AthlètesInscription.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Inscription d'un athlète");
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+
+            // Update athlete list after closing the inscription page
+            updateAthleteList();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void populateAthleteList() {
+        try {
+            List<Athlète> dbAthletes = BDD_Athlètes.getAllAthletes();
+            for (Athlète athlete : dbAthletes) {
+                HBox row = new HBox();
+                row.setStyle("-fx-padding: 5; -fx-background-color: transparent;");
+                Text athleteText = new Text(athlete.getPrenom() + " " + athlete.getNom());
+                row.getChildren().add(athleteText);
+
+                // Add mouse hover effect
+                row.setOnMouseEntered(event -> row.setStyle("-fx-background-color: lightblue; -fx-padding: 5;"));
+                row.setOnMouseExited(event -> row.setStyle("-fx-background-color: transparent; -fx-padding: 5;"));
+
+                // Add double-click event to open athlete info page
+                row.setOnMouseClicked(event -> {
+                    if (event.getClickCount() == 2) {
+                        openAthleteInfoPage(athlete);
+                    }
+                });
+                athleteList.getChildren().add(row);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     private void updateSuggestedAthletes() {
@@ -96,22 +143,6 @@ public class AthlètesAccueilController {
         }
 
         athleteList.setVisible(!filteredAthletes.isEmpty());
-    }
-
-    private void openInscriptionPage() {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fr/isep/algo/classolympians/AthlètesInscription.fxml"));
-            Parent root = loader.load();
-            Stage stage = new Stage();
-            stage.setTitle("Inscription d'un athlète");
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
-
-            // Update athlete list after closing the inscription page
-            updateAthleteList();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     private void updateAthleteList() {
