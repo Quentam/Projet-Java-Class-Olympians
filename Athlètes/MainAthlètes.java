@@ -1,3 +1,4 @@
+
 package fr.isep.algo.classolympians;
 
 import javafx.application.Application;
