@@ -1,8 +1,14 @@
 package fr.isep.algo.accueilprojet;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class AccueilController {
 
@@ -111,19 +117,58 @@ public class AccueilController {
                 "    <header>\n" +
                 "        <img src=\"logo.png\" alt=\"Logo Paris 2024\" class=\"logo\">\n" +
                 "        <h1>Bienvenue sur Class Olympians</h1>\n" +
-                "        <h2>votre application de gestion des J.O. 2024</h2>\n" +
+                "        <h2>votre application de gestion des J.O. 2024</h +
                 "    </header>\n" +
                 "    <main>\n" +
-                "        <div class=\"circle athletes\">Athlètes</div>\n" +
-                "        <div class=\"circle disciplines\">Disciplines Sportive</div>\n" +
-                "        <div class=\"circle events\">Évènements Sportif</div>\n" +
-                "        <div class=\"circle results\">Résultats</div>\n" +
-                "        <div class=\"circle reports\">Génération de rapports</div>\n" +
+                "        <div class=\"circle athletes\"><a href=\"athletes\">Athlètes</a></div>\n" +
+                "        <div class=\"circle disciplines\"><a href=\"disciplines\">Disciplines Sportive</a></div>\n" +
+                "        <div class=\"circle events\"><a href=\"events\">Évènements Sportif</a></div>\n" +
+                "        <div class=\"circle results\"><a href=\"results\">Résultats</a></div>\n" +
+                "        <div class=\"circle reports\"><a href=\"reports\">Génération de rapports</a></div>\n" +
                 "    </main>\n" +
                 "</div>\n" +
                 "</body>\n" +
                 "</html>";
 
         webEngine.loadContent(htmlContent);
+
+        // Handle hyperlink click
+        webEngine.setCreatePopupHandler(config -> {
+            WebEngine newWebEngine = new WebEngine();
+            newWebEngine.locationProperty().addListener((obs, oldLocation, newLocation) -> {
+                if (newLocation != null) {
+                    handleNavigation(newLocation);
+                }
+            });
+            return newWebEngine;
+        });
+    }
+
+    private void handleNavigation(String location) {
+        if (location.endsWith("athletes")) {
+            loadPage("athletes.fxml");
+        } else if (location.endsWith("disciplines")) {
+            loadPage("disciplines.fxml");
+        } else if (location.endsWith("events")) {
+            loadPage("events.fxml");
+        } else if (location.endsWith("results")) {
+            loadPage("results.fxml");
+        } else if (location.endsWith("reports")) {
+            loadPage("reports.fxml");
+        }
+    }
+
+    private void loadPage(String fxmlFile) {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource(fxmlFile));
+            AnchorPane newPage = loader.load();
+
+            Stage stage = (Stage) webView.getScene().getWindow();
+            Scene scene = new Scene(newPage);
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
