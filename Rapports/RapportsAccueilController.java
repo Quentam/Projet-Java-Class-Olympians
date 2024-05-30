@@ -1,9 +1,15 @@
-package fr.isep.algo.accueilprojet;
+package fr.isep.algo.classolympians;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.event.ActionEvent;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class RapportsAccueilController {
 
@@ -46,12 +52,12 @@ public class RapportsAccueilController {
 
     @FXML
     private void handleDisciplinesButton(ActionEvent event) {
-        navigateToPage("/fr/isep/algo/classolympians/DisciplinesAccueil.fxml");
+        navigateToPage("/fr/isep/algo/classolympians/AccueilDisciplines.fxml");
     }
 
     @FXML
     private void handleEventsButton(ActionEvent event) {
-        navigateToPage("/fr/isep/algo/classolympians/EvènementsAccueil.fxml");
+        navigateToPage("/fr/isep/algo/classolympians/AccueilEvènements.fxml");
     }
 
     @FXML
@@ -61,7 +67,7 @@ public class RapportsAccueilController {
 
     @FXML
     private void handleReportsButton(ActionEvent event) {
-        navigateToPage("/fr/isep/algo/classolympians/RapportsAccueil.fxml");
+        navigateToPage("/fr/isep/algo/classolympians/AccueilGénérationdeRapports.fxml");
     }
 
     private void navigateToPage(String fxmlFile) {
