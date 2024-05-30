@@ -46,12 +46,12 @@ public class RapportsAccueilController {
 
     @FXML
     private void handleDisciplinesButton(ActionEvent event) {
-        navigateToPage("/fr/isep/algo/classolympians/AccueilDisciplines.fxml");
+        navigateToPage("/fr/isep/algo/classolympians/DisciplinesAccueil.fxml");
     }
 
     @FXML
     private void handleEventsButton(ActionEvent event) {
-        navigateToPage("/fr/isep/algo/classolympians/AccueilEvènements.fxml");
+        navigateToPage("/fr/isep/algo/classolympians/EvènementsAccueil.fxml");
     }
 
     @FXML
@@ -61,7 +61,7 @@ public class RapportsAccueilController {
 
     @FXML
     private void handleReportsButton(ActionEvent event) {
-        navigateToPage("/fr/isep/algo/classolympians/AccueilGénérationdeRapports.fxml");
+        navigateToPage("/fr/isep/algo/classolympians/RapportsAccueil.fxml");
     }
 
     private void navigateToPage(String fxmlFile) {
