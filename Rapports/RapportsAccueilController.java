@@ -32,7 +32,7 @@ public class RapportsAccueilController {
 
     @FXML
     private void handleCountryReportButton(ActionEvent event) {
-        // Code to handle country report button action
+        navigateToPage("/fr/isep/algo/classolympians/Rapportspays.fxml");
     }
 
     @FXML
