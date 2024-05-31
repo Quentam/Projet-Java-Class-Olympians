@@ -17,6 +17,7 @@ public class MainAccueil extends Application {
         // Créer et afficher la scène
         primaryStage.setTitle("Olympics Management System");
         primaryStage.setScene(new Scene(root, 1200, 800));
+        primaryStage.setMaximized(true); // Maximiser la fenêtre
         primaryStage.show();
     }
 
