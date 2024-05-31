@@ -89,7 +89,7 @@
     <!-- Main Content -->
     <VBox alignment="CENTER" layoutX="326.0" layoutY="50.0" spacing="20">
         <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" styleClass="main-title" text="Inscription Athlète à une Discipline" textAlignment="CENTER" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="694.0" styleClass="main-title" text="Inscription Athlète à une/des discipline/s" textAlignment="CENTER" />
             <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-weight: Bold;" styleClass="subtitle" text="Saisissez le nom de l'athlète" textAlignment="CENTER" />
         </children>
     </VBox>
@@ -99,5 +99,5 @@
     <VBox fx:id="athleteList" layoutX="395.0" layoutY="247.0" prefHeight="300.0" prefWidth="478.0" spacing="10" style="-fx-background-color: white; -fx-padding: 10;">
         <!-- Items will be added here dynamically -->
     </VBox>
-    <Button fx:id="visualizeButton" layoutX="400.0" layoutY="560.0" prefHeight="36.0" prefWidth="470.0" text="Appuyez pour visualiser les disciplines liées à la discipline de l'athlète" />
+    <Button fx:id="visualizeButton" layoutX="400.0" layoutY="560.0" prefHeight="36.0" prefWidth="470.0" text="Appuyer pour voir les disciplines auxquelles l'athlète est inscrit" />
 </AnchorPane>
