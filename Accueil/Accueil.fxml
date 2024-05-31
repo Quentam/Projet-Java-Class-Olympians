@@ -24,31 +24,31 @@
     </ImageView>
 
     <!-- Main Container -->
-    <VBox layoutX="100.0" layoutY="50.0" spacing="20">
+    <VBox layoutX="100.0" layoutY="155.0" spacing="20">
         <children>
-            <Label style="-fx-font-size: 2.5em; -fx-font-weight: Bold;" text="Bienvenue sur Class Olympians" />
-            <Label style="-fx-font-size: 1.5em; -fx-font-weight: Bold;" text="Votre application de gestion des J.O. 2024" />
 
             <!-- Circles Container -->
             <AnchorPane>
                 <children>
-                    <VBox alignment="CENTER" layoutX="50.0" layoutY="100.0" style="-fx-background-color: rgba(0, 123, 255, 0.7); -fx-border-radius: 50%; -fx-background-radius: 50%; -fx-pref-width: 200px; -fx-pref-height: 200px;">
-                        <Label fx:id="At" onMouseClicked="#handleAthletesButton" style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Athlètes" />
+                    <VBox alignment="CENTER" layoutX="-9.0" layoutY="103.0" onMouseClicked="#handleAthletesButton" prefHeight="225.0" prefWidth="232.0" style="-fx-background-color: rgba(0, 123, 255, 0.7); -fx-border-radius: 50%; -fx-background-radius: 50%; -fx-pref-width: 200px; -fx-pref-height: 200px;">
+                        <Label style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Athlètes" />
                     </VBox>
-                    <VBox alignment="CENTER" layoutX="300.0" layoutY="100.0" style="-fx-background-color: rgba(0, 0, 0, 0.7); -fx-border-radius: 50%; -fx-background-radius: 50%; -fx-pref-width: 200px; -fx-pref-height: 200px;">
-                        <Label fx:id="Di" onMouseClicked="#handleDisciplinesButton" style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Disciplines Sportive" />
+                    <VBox alignment="CENTER" layoutX="385.0" layoutY="103.0" onMouseClicked="#handleDisciplinesButton" prefWidth="243.0" style="-fx-background-color: rgba(0, 0, 0, 0.7); -fx-border-radius: 50%; -fx-background-radius: 50%; -fx-pref-width: 200px; -fx-pref-height: 200px;">
+                        <Label style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Disciplines Sportive" />
                     </VBox>
-                    <VBox alignment="CENTER" layoutX="550.0" layoutY="100.0" style="-fx-background-color: rgba(255, 0, 0, 0.7); -fx-border-radius: 50%; -fx-background-radius: 50%; -fx-pref-width: 200px; -fx-pref-height: 200px;">
-                        <Label fx:id="Ev" onMouseClicked="#handleEventsButton" style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Évènements Sportif" />
+                    <VBox alignment="CENTER" layoutX="789.0" layoutY="103.0" onMouseClicked="#handleEventsButton" style="-fx-background-color: rgba(255, 0, 0, 0.7); -fx-border-radius: 50%; -fx-background-radius: 50%; -fx-pref-width: 200px; -fx-pref-height: 200px;">
+                        <Label style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Évènements Sportif" />
                     </VBox>
-                    <VBox alignment="CENTER" layoutX="150.0" layoutY="350.0" style="-fx-background-color: rgba(255, 165, 0, 0.7); -fx-border-radius: 50%; -fx-background-radius: 50%; -fx-pref-width: 200px; -fx-pref-height: 200px;">
-                        <Label fx:id="Re" onMouseClicked="#handleResultsButton" style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Résultats" />
+                    <VBox alignment="CENTER" layoutX="185.0" layoutY="272.0" onMouseClicked="#handleResultsButton" style="-fx-background-color: rgba(255, 165, 0, 0.7); -fx-border-radius: 50%; -fx-background-radius: 50%; -fx-pref-width: 200px; -fx-pref-height: 200px;">
+                        <Label style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Résultats" />
                     </VBox>
-                    <VBox alignment="CENTER" layoutX="400.0" layoutY="350.0" style="-fx-background-color: rgba(0, 128, 0, 0.7); -fx-border-radius: 50%; -fx-background-radius: 50%; -fx-pref-width: 200px; -fx-pref-height: 200px;">
-                        <Label fx:id="Ge" onMouseClicked="#handleReportsButton" style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Génération de rapports" />
+                    <VBox alignment="CENTER" layoutX="585.0" layoutY="272.0" onMouseClicked="#handleReportsButton" style="-fx-background-color: rgba(0, 128, 0, 0.7); -fx-border-radius: 50%; -fx-background-radius: 50%; -fx-pref-width: 200px; -fx-pref-height: 200px;">
+                        <Label style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Génération de rapports" />
                     </VBox>
                 </children>
             </AnchorPane>
         </children>
     </VBox>
+      <Label layoutX="382.0" layoutY="34.0" style="-fx-font-size: 2.5em; -fx-text-fill: black; -fx-text-alignment: center;" styleClass="main-title" text="Bienvenue sur Class Olympians" />
+      <Label layoutX="434.0" layoutY="94.0" style="-fx-font-size: 1.5em; -fx-text-fill: black; -fx-text-alignment: center;" styleClass="subtitle" text="votre application de gestion des J.O. 2024" />
 </AnchorPane>
