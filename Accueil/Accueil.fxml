@@ -31,24 +31,24 @@
             <AnchorPane>
                 <children>
                     <VBox alignment="CENTER" layoutX="-9.0" layoutY="103.0" onMouseClicked="#handleAthletesButton" prefHeight="225.0" prefWidth="232.0" style="-fx-background-color: rgba(0, 123, 255, 0.7); -fx-border-radius: 50%; -fx-background-radius: 50%; -fx-pref-width: 200px; -fx-pref-height: 200px;">
-                        <Label style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Athlètes" />
+                        <Label fx:id="At" style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Athlètes" />
                     </VBox>
                     <VBox alignment="CENTER" layoutX="385.0" layoutY="103.0" onMouseClicked="#handleDisciplinesButton" prefWidth="243.0" style="-fx-background-color: rgba(0, 0, 0, 0.7); -fx-border-radius: 50%; -fx-background-radius: 50%; -fx-pref-width: 200px; -fx-pref-height: 200px;">
-                        <Label style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Disciplines Sportive" />
+                        <Label fx:id="Di" style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Disciplines Sportive" />
                     </VBox>
                     <VBox alignment="CENTER" layoutX="789.0" layoutY="103.0" onMouseClicked="#handleEventsButton" style="-fx-background-color: rgba(255, 0, 0, 0.7); -fx-border-radius: 50%; -fx-background-radius: 50%; -fx-pref-width: 200px; -fx-pref-height: 200px;">
-                        <Label style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Évènements Sportif" />
+                        <Label fx:id="Ev" style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Évènements Sportif" />
                     </VBox>
                     <VBox alignment="CENTER" layoutX="185.0" layoutY="272.0" onMouseClicked="#handleResultsButton" style="-fx-background-color: rgba(255, 165, 0, 0.7); -fx-border-radius: 50%; -fx-background-radius: 50%; -fx-pref-width: 200px; -fx-pref-height: 200px;">
-                        <Label style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Résultats" />
+                        <Label fx:id="Re" style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Résultats" />
                     </VBox>
                     <VBox alignment="CENTER" layoutX="585.0" layoutY="272.0" onMouseClicked="#handleReportsButton" style="-fx-background-color: rgba(0, 128, 0, 0.7); -fx-border-radius: 50%; -fx-background-radius: 50%; -fx-pref-width: 200px; -fx-pref-height: 200px;">
-                        <Label style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Génération de rapports" />
+                        <Label fx:id="Ge" style="-fx-font-size: 1.5em; -fx-text-fill: white; -fx-font-weight: bold; -fx-text-alignment: center;" text="Génération de rapports" />
                     </VBox>
                 </children>
             </AnchorPane>
         </children>
     </VBox>
-      <Label layoutX="382.0" layoutY="34.0" style="-fx-font-size: 2.5em; -fx-text-fill: black; -fx-text-alignment: center;" styleClass="main-title" text="Bienvenue sur Class Olympians" />
-      <Label layoutX="434.0" layoutY="94.0" style="-fx-font-size: 1.5em; -fx-text-fill: black; -fx-text-alignment: center;" styleClass="subtitle" text="votre application de gestion des J.O. 2024" />
+    <Label layoutX="382.0" layoutY="34.0" style="-fx-font-size: 2.5em; -fx-text-fill: black; -fx-text-alignment: center;" styleClass="main-title" text="Bienvenue sur Class Olympians" />
+    <Label layoutX="434.0" layoutY="94.0" style="-fx-font-size: 1.5em; -fx-text-fill: black; -fx-text-alignment: center;" styleClass="subtitle" text="votre application de gestion des J.O. 2024" />
 </AnchorPane>
