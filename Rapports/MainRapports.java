@@ -1,4 +1,4 @@
-package fr.isep.algo.accueilprojet;
+package fr.isep.algo.classolympians;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
