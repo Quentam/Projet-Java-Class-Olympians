@@ -12,7 +12,7 @@
     </stylesheets>
 
     <!-- Background Image -->
-    <ImageView fx:id="backgroundImage" fitHeight="725.0" fitWidth="1250.0" layoutX="5.0" opacity="0.6" pickOnBounds="true" preserveRatio="false">
+    <ImageView fx:id="backgroundImage" fitHeight="725.0" fitWidth="1250.0" layoutX="6.0" opacity="0.6" pickOnBounds="true" preserveRatio="false">
         <image>
             <Image url="@Images/Rapports.png" />
         </image>
@@ -22,7 +22,7 @@
     <ToolBar layoutX="-25.0" prefHeight="725.0" prefWidth="93.0" style="-fx-background-color: grey;" />
 
     <!-- Sidebar with Icons -->
-    <VBox layoutX="-14.0" layoutY="38.0" spacing="20">
+    <VBox layoutX="-2.0" layoutY="38.0" spacing="20">
         <children>
             <Button fx:id="HomeButton" onAction="#handleHomeButton" style="-fx-background-color: white;" styleClass="icon-button" textAlignment="CENTER" textFill="#b54444">
                 <graphic>
@@ -89,10 +89,10 @@
     </ImageView>
 
     <!-- Main Content -->
-    <VBox alignment="CENTER" layoutX="326.0" layoutY="50.0" spacing="20">
+    <VBox alignment="CENTER" layoutX="216.0" layoutY="50.0" spacing="20">
         <children>
             <Label alignment="CENTER" contentDisplay="CENTER" styleClass="main-title" text="Rapports" textAlignment="CENTER" />
-            <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-weight: Bold;" styleClass="subtitle" text="Sélectionner un athlète, un pays ou même les J.O. en général afin de générer automatiquement un rapport sur, respectivement, les performances de l’athlète, les médailles remportées par le pays (ainsi que ses meilleurs athlètes) ou les records des différents évènements des J.O." textAlignment="CENTER" />
+            <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-weight: Bold;" styleClass="subtitle" text="Sélectionner un athlète, un pays ou même les J.O. en général afin de générer automatiquement un rapport." textAlignment="CENTER" />
         </children>
     </VBox>
 
