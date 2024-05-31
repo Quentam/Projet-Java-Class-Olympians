@@ -1,45 +1,30 @@
 package fr.isep.algo.classolympians;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.stage.Stage;
+
 import java.io.IOException;
 
 public class AccueilController {
 
     @FXML
-    private ImageView backgroundImage;
+    private Label At;
 
     @FXML
-    private ImageView logoImage;
+    private Label Di;
 
     @FXML
-    private Button homeButton;
+    private Label Ev;
 
     @FXML
-    private Button athletesButton;
+    private Label Re;
 
     @FXML
-    private Button disciplinesButton;
-
-    @FXML
-    private Button eventsButton;
-
-    @FXML
-    private Button resultsButton;
-
-    @FXML
-    private Button reportsButton;
-
-    // Add methods to handle navigation button actions
-    @FXML
-    private void handleHomeButton() {
-        navigateToPage("/fr/isep/algo/classolympians/Accueil.fxml");
-    }
+    private Label Ge;
 
     @FXML
     private void handleAthletesButton() {
@@ -70,7 +55,7 @@ public class AccueilController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
             Parent root = loader.load();
-            Stage stage = (Stage) homeButton.getScene().getWindow();  // Changed from athleteNameField to homeButton
+            Stage stage = (Stage) At.getScene().getWindow(); // Utilisation correcte de la scène actuelle
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
