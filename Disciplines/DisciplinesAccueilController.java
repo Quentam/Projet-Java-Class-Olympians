@@ -40,12 +40,12 @@ public class DisciplinesAccueilController {
 
     @FXML
     private void handleAddEvent() {
-        // Code to handle adding a new event
+        openPage("/fr/isep/algo/classolympians/DisciplinesInscription.fxml");
     }
 
     @FXML
     private void handleRegisterAthlete() {
-        // Code to handle registering an athlete to an event
+        openPage("/fr/isep/algo/classolympians/DisciplinesInscriptionAthlètes.fxml");
     }
 
     private void addEventToList(String eventName, String eventDate) {
