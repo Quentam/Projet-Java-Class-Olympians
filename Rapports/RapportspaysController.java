@@ -1,5 +1,6 @@
 package fr.isep.algo.classolympians;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -33,33 +34,33 @@ public class RapportspaysController {
     }
 
     @FXML
-    private void handleHomeButton() {
+    private void handleHomeButton(ActionEvent event) {
         navigateToPage("/fr/isep/algo/classolympians/Accueil.fxml");
     }
 
     @FXML
-    private void handleAthletesButton() {
+    private void handleAthletesButton(ActionEvent event) {
         navigateToPage("/fr/isep/algo/classolympians/AthlètesAccueil.fxml");
     }
 
     @FXML
-    private void handleDisciplinesButton() {
-        navigateToPage("/fr/isep/algo/classolympians/AccueilDisciplines.fxml");
+    private void handleDisciplinesButton(ActionEvent event) {
+        navigateToPage("/fr/isep/algo/classolympians/DisciplinesAccueil.fxml");
     }
 
     @FXML
-    private void handleEventsButton() {
-        navigateToPage("/fr/isep/algo/classolympians/AccueilEvènements.fxml");
+    private void handleEventsButton(ActionEvent event) {
+        navigateToPage("/fr/isep/algo/classolympians/EvènementsAccueil.fxml");
     }
 
     @FXML
-    private void handleResultsButton() {
+    private void handleResultsButton(ActionEvent event) {
         navigateToPage("/fr/isep/algo/classolympians/AccueilRésultats.fxml");
     }
 
     @FXML
-    private void handleReportsButton() {
-        navigateToPage("/fr/isep/algo/classolympians/AccueilGénérationdeRapports.fxml");
+    private void handleReportsButton(ActionEvent event) {
+        navigateToPage("/fr/isep/algo/classolympians/RapportsAccueil.fxml");
     }
 
     private void navigateToPage(String fxmlFile) {
